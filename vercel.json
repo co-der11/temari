@@ -1,21 +1,8 @@
 {
-  "version":2,
-  "builds":[
-    {
-      "src":"index.js",
-      "use":"2VERCEL/node"
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 10
     }
-  ],
-      "routes":[
-        {
-          "src":"telegram-webhook",
-          "methods" :["POST"],
-         "dest":"/api/telegram"
-        }
-      ],
-        "env":{
-          "TELEGRAM_BOT_TOKEN":"",
-          "TELEGRAM_WEBOOK_URL":""
-        }
-        }
-
+  }
+}
